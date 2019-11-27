@@ -16,7 +16,7 @@ public class DineroSuficiente extends EstadoMaquina {
         if (maquinaDeGaseosas.getPrecioBebida() >= maquinaDeGaseosas.getDineroIngresado()) {
             this.maquinaDeGaseosas.setEstadoConDinero();
         } else {
-            System.out.println("Falta ingresar: " + (maquinaDeGaseosas.getPrecioBebida()-maquinaDeGaseosas.getDineroIngresado()));
+            System.out.println("Su vuelto es de: " + (maquinaDeGaseosas.getDineroIngresado()-maquinaDeGaseosas.getPrecioBebida()));
         }
     }
 
