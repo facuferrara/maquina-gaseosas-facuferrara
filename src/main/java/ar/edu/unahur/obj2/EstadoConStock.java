@@ -24,4 +24,6 @@ public class EstadoConStock extends EstadoMaquina {
     public void darVuelto() {
 
     }
+
+
 }

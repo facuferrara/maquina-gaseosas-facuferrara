@@ -69,5 +69,8 @@ public class MaquinaDeGaseosas {
     public void setStock(int stock) {
         this.stock = stock;
     }
+    public void darVuelto(){
+         estadoMaquina.darVuelto();
+    }
 
 }
