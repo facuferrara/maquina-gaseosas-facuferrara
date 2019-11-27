@@ -1,7 +1,9 @@
 package ar.edu.unahur.obj2;
 
-public class EstadoConDinero extends EstadoMaquina {
-    public EstadoConDinero(MaquinaDeGaseosas maquinaDeGaseosas) {
+public  class DineroInsuficiente extends EstadoMaquina{
+
+
+    public DineroInsuficiente(MaquinaDeGaseosas maquinaDeGaseosas) {
         super(maquinaDeGaseosas);
     }
 
@@ -24,6 +26,5 @@ public class EstadoConDinero extends EstadoMaquina {
     public void darVuelto() {
 
     }
-
 
 }

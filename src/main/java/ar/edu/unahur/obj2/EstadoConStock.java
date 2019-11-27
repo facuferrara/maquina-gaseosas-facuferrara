@@ -1,7 +1,7 @@
 package ar.edu.unahur.obj2;
 
-public class Vendido extends EstadoMaquina {
-    public Vendido(MaquinaDeGaseosas maquinaDeGaseosas) {
+public class EstadoConStock extends EstadoMaquina {
+    public EstadoConStock(MaquinaDeGaseosas maquinaDeGaseosas) {
         super(maquinaDeGaseosas);
     }
 

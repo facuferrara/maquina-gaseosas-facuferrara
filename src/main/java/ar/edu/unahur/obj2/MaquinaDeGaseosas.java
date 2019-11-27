@@ -8,17 +8,16 @@ public class MaquinaDeGaseosas {
     private EstadoMaquina estadoSinDinero;
     private EstadoMaquina estadoConDinero;
     private EstadoMaquina estadoSinStock;
-    private EstadoMaquina estadoVendido;
     private int dineroIngresado;
 
-    public MaquinaDeGaseosas(int stock, int precioBebida) {
-        this.precioBebida = precioBebida;
-        this.estadoSinDinero = new EstadoSinDinero(this);
-        this.estadoConDinero = new EstadoConDinero(this);
-        this.estadoSinStock = new EstadoSinStock(this);
-        this.estadoVendido = new Vendido(this);
-        this.estadoActual = this.estadoSinDinero;
-        this.stock = stock;
+    public EstadoMaquina estadoMaquina;
+    public EstadoMaquina getDineroSuficiente = new DineroSuficiente(this);
+    public EstadoMaquina getDineroInsuficiente = new DineroInsuficiente(this);
+    public EstadoMaquina getEstadoStock = new EstadoConStock(this);
+    public EstadoMaquina getEstadoSinStock = new DineroSuficiente(this);
+
+    public MaquinaDeGaseosas() {
+        this.agregarDinero(dineroIngresado);
     }
 
     public void setEstadoSinDinero() {
@@ -31,10 +30,6 @@ public class MaquinaDeGaseosas {
 
     public void setEstadoSinStock() {
         this.estadoActual = this.estadoSinStock;
-    }
-
-    public void setEstadoVendido() {
-        this.estadoActual = this.estadoVendido;
     }
 
     public void reponerStock(int cantidad) {
